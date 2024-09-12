@@ -17,7 +17,7 @@ const fetchRandomWord = async (): Promise<RandomWordProps[]> => {
   export const useRandomWord = () => {
     return useQuery<RandomWordProps[], Error>({
       queryKey: ['randomWord'], // Clé de requête
-      queryFn: fetchRandomWord,
-      refetchOnWindowFocus: false // Fonction de récupération
+      queryFn: fetchRandomWord, // Fonction de récupération
+      refetchOnWindowFocus: false 
     });
   };
